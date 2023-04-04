@@ -1,16 +1,20 @@
 class Pessoa:
     def __init__(self, nome, cpf):
-        self.nome = nome
-        self.cpf = cpf
+        self.__nome = nome
+        self.__cpf = cpf
 
-    def set_nome(self, nome):
-        self.nome = nome
+    @property
+    def nome(self):
+        return self.__nome
 
-    def set_cpf(self, cpf):
-        self.cpf = cpf
+    @property
+    def cpf(self):
+        return self.__cpf
 
-    def get_nome(self):
-        return self.nome
+    @nome.setter
+    def nome(self, nome):
+        self.__nome = nome
 
-    def get_cpf(self):
-        return self.cpf
+    @cpf.setter
+    def cpf(self, cpf):
+        self.__cpf = cpf

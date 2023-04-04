@@ -1,4 +1,5 @@
-from subclasses import Aluno, Funcionario
+from aluno import Aluno
+from funcionario import Funcionario
 from pessoa import Pessoa
 pessoas = list()
 while True:
